@@ -51,8 +51,7 @@ function RequiredGradesBody({
   ): { result: number; overflowCounts: number } => {
     if (
       simulatedGoalGrade! >= preferences?.maximumGrade! ||
-      (simulatedGoalGrade! <= preferences?.minimumGrade! &&
-        preferences?.passingInverse)
+      simulatedGoalGrade! <= preferences?.minimumGrade!
     ) {
       return { result: Infinity, overflowCounts: Infinity };
     }
@@ -381,8 +380,7 @@ function RequiredGradesBodyForSubject({
   ): { result: number; overflowCounts: number } => {
     if (
       simulatedGoalGrade! >= preferences?.maximumGrade! ||
-      (simulatedGoalGrade! <= preferences?.minimumGrade! &&
-        preferences?.passingInverse)
+      simulatedGoalGrade! <= preferences?.minimumGrade!
     )
       return { result: Infinity, overflowCounts: Infinity };
 
